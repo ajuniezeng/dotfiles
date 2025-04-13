@@ -3,3 +3,7 @@ theme = "zed_onelight"
 enable = true
 [editor.file-picker]
 hidden = true
+
+# For WSL
+[editor]
+true-color = true
