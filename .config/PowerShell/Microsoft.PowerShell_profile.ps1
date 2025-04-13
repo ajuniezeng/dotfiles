@@ -8,7 +8,19 @@ function y {
   Remove-Item -Path $tmp
 }
 
-Import-Module -Name Terminal-Icons
+Set-Alias -Name ls -Value "eza"
+
+function la {
+    eza -a
+}
+
+function ll {
+    eza -l --icons=always
+}
+
+function lla {
+    eza -a -l --icons=always 
+}
 
 oh-my-posh init pwsh | Invoke-Expression
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
