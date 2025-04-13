@@ -17,4 +17,3 @@
 
 - [Scoop](https://scoop.sh/): A package manager.
 - [Git for Windows](https://github.com/git-for-windows/git)
-
