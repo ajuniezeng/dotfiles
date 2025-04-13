@@ -1,0 +1,104 @@
+[[language]]
+name = "markdown"
+auto-format = true
+formatter = { command = 'prettier', args = ["--parser", "markdown"] }
+language-servers = ["markdown-oxide"]
+
+[[language]]
+name = "typescript"
+roots = ["deno.json", "deno.jsonc", "package.json"]
+formatter = { command = "prettier", args = [ "--parser", "typescript" ] }
+auto-format = true
+language-servers = ["deno-lsp"]
+
+[[language]]
+name = "javascript"
+roots = ["deno.json", "deno.jsonc", "package.json"]
+formatter = { command = "prettier", args = [ "--parser", "typescript" ] }
+auto-format = true
+language-servers = ["deno-lsp"]
+
+[[language]]
+name = "tsx"
+language-servers = [ "deno-lsp", "tailwindcss-ls" ]
+roots = ["deno.json", "deno.jsonc", "package.json"]
+formatter = { command = "prettier", args = [ "--parser", "typescript" ] }
+auto-format = true
+
+[[language]]
+name = "jsx"
+roots = ["deno.json", "deno.jsonc", "package.json"]
+language-servers = [ "deno-lsp", "tailwindcss-ls" ]
+formatter = { command = "prettier", args = [ "--parser", "typescript" ] }
+auto-format = true
+
+[language-server.deno-lsp]
+command = "deno"
+args = ["lsp"]
+config.deno.enable = true
+
+[[language]]
+name = "rust"
+auto-format = true
+formatter = { command = "cargo", args = [ "fmt" ] }
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[language-server.rust-analyzer.config.cargo]
+features = "all"
+
+[[language]]
+name = "html"
+language-servers = [ "vscode-html-language-server", "tailwindcss-ls" ]
+formatter = { command = 'prettier', args = ["--parser", "html"] }
+auto-format = true
+
+[[language]]
+name = "json"
+language-servers = [ "vscode-json-language-server" ]
+formatter = { command = 'prettier', args = ["--parser", "json"] }
+auto-format = true
+
+[[language]]
+name = "css"
+language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
+formatter = { command = 'prettier', args = ["--parser", "css"] }
+auto-format = true
+
+[[language]]
+name = "astro"
+auto-format = true
+language-servers = [ "astro-ls", "tailwindcss-ls" ]
+
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["fmt", "-"] }
+
+[[language]]
+name = "c"
+auto-format = true
+formatter = { command = "clang-format"}
+
+[[language]]
+name = "cpp"
+auto-format = true
+formatter = { command = "clang-format"}
+
+[language-server.vscode-json-language-server.config]
+json = { validate = { enable = true }, format = { enable = true } }
+provideFormatter = true
+
+[language-server.vscode-css-language-server.config]
+css = { validate = { enable = true } }
+scss = { validate = { enable = true } }
+less = { validate = { enable = true } }
+provideFormatter = true
+
+[language-server.tailwindcss-ls]
+command = "tailwindcss-language-server"
+args = ["--stdio"]
+
+[language-server.astro-ls]
+command = "astro-ls"
+args = ["--stdio"]

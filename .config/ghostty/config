@@ -1,0 +1,12 @@
+font-family = Iosevka Term
+font-family = Source Han Sans HW SC VF
+font-thicken = true
+font-style = Regular
+font-style-bold = Bold
+font-style-italic = Italic
+font-size = 15
+macos-titlebar-style = transparent
+theme = Monokai Pro Light
+
+background-opacity = 0.8
+background-blur-radius = 20

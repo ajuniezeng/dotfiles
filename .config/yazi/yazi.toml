@@ -1,0 +1,13 @@
+[opener]
+edit = [
+  { run = 'hx "$@"', block = true, for = "unix" },
+  { run = 'hx %*', block = true, for = "windows" },
+]
+play = [
+  { run = 'mpv "$@"', orphan = true, for = "unix" },
+  { run = 'mpc-be64 %*', orphan = true, for = "windows" },
+]
+[manager]
+show_hidden = true
+sort_by = "mtime"
+sort_reverse=true

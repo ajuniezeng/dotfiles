@@ -1,0 +1,11 @@
+[user]
+	name = Ajunie Zeng
+	email = ajuniezeng@gmail.com
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
+[init]
+	defaultBranch = main
